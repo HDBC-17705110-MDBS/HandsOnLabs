@@ -1,8 +1,8 @@
-# Deploying your personal website
+# HOL 01: Deploying your personal website
 
 ## Objectives
 
-The goal of this hands-on activity is to introduce you to the basics of cloud computing through the deployment of a personal website using Jekyll and GitHub Pages. Additionally, you will explore and write a blog entry on a cloud application in the field of biomedicine. 
+The goal of this hands-on lab is to introduce you to the basics of cloud computing through the deployment of a personal website using Jekyll and GitHub Pages. Additionally, you will explore and write a blog entry on a cloud application in the field of biomedicine. 
 
 ## Introduction
 
@@ -28,13 +28,14 @@ Github pages hides the complexity of setting up a web server and allows you to h
 
 ## Task 2: Writing a Blog Entry
 
-1. Explore the cloud application in the field of biomedicine that you are interested in.
+1. Explore a cloud application in the field of biomedicine that you are interested in.
 2. Write a blog entry on your personal website about the cloud application you explored. You can use the `/_posts/` directory to create a new blog entry. The file name should follow the format `YYYY-MM-DD-title.md`. Check the existing blog entries for examples.
 3. You can add a new blog entry by navigating to the `/_posts/` directory and clicking on the "Add file -> Create a new file" button.
 4. Commit the changes (use master branch).
 
 ## Task 3: Sharing your personal website
-1. Make a Pull Request to course repository with the link to your personal website.
+1. Edit the README.md file in your repository to include a link to your personal website.
+2. Commit the changes, this will create a pull request to the original repository. 
 
 ## Optional Task: Local Deployment
 
