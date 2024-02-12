@@ -1,0 +1,109 @@
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What are the advantages of cloud computing over computing on-premises?"
+prompt.distractors = [
+    "Avoid capital purchases",
+    "Use on-demand capacity",
+    "Increase speed and agility",
+]
+answer.answer = "All of the above"
+id = "1"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Which of the following best describes a “hybrid” cloud deployment model?"  
+prompt.distractors = [
+    "Services are split evenly between public and private clouds.",
+    "All services are hosted on public cloud infrastructure.",
+    "All services are hosted on private cloud infrastructure.",
+]
+answer.answer = "Services are hosted on private cloud infrastructure with public cloud resources used as needed."
+id = "2"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is horizontal scaling?"
+prompt.distractors = [
+    "Adding more resources to a single server.",
+    "Adding more storage to a system.",
+    "Adding more memory to a system.",
+]
+answer.answer = "Adding more servers to a system."
+id = "3"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Which of the following is not a benefit of cloud computing?"
+prompt.distractors = [
+    "Scalability.",
+    "Cost-effectiveness.",
+    "Accessibility from any location.",
+]
+answer.answer = "Full control over physical servers."
+id = "4"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Which of the following factors should not influence the decision to migrate an application to the cloud?"
+prompt.distractors = [
+    "The age of the application’s codebase.",
+    "The application’s resource requirements.",
+    "The application’s compatibility with cloud services.",
+]
+answer.answer = "The color of the application’s logo."
+id = "5"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "Who is typically responsible for securing data in transit (from the customer to the cloud)?"
+prompt.distractors = [
+    "The cloud service provider.",
+    "Both the cloud service provider and the customer.",
+    "Neither the cloud service provider nor the customer.",
+]
+answer.answer = "The customer."
+id = "6"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is the main advantage of serverless computing in the context of cloud services?"
+prompt.distractors = [
+    "Reduced latency.",
+    "Increased storage capacity.",
+    "Enhanced network security.",
+]
+answer.answer = "Elimination of server management."
+id = "7"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "How does cloud elasticity contribute to cost optimization?"
+prompt.distractors = [
+    "By reducing data storage costs.",
+    "By limiting the number of concurrent users.",
+    "By reducing the number of available services.",
+]
+answer.answer = "By automatically adjusting resources based on demand."
+id = "8"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "What is the primary advantage of using cloud computing in biomedical research for storing and processing large genomic datasets?"
+prompt.distractors = [
+    "Cost-effectiveness.",
+    "Enhanced security.",
+    "Reduced latency."
+]
+answer.answer = "Scalability"
+id = "9"
+
+[[questions]]
+type = "MultipleChoice"
+prompt.prompt = "In the context of scientific research reproducibility, how does cloud computing play a crucial role in overcoming challenges related to version control and environment consistency?"
+prompt.distractors = [
+    "By automating the installation of software dependencies.",
+    "By optimizing algorithms for parallel processing.",
+    "By enabling the use of cloud-based storage solutions."
+]
+answer.answer = "By providing versioned snapshots of entire computing environments."
+id = "10"

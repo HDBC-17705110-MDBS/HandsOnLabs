@@ -37,12 +37,3 @@ Github pages hides the complexity of setting up a web server and allows you to h
 1. Edit the README.md file in your repository to include a link to your personal website.
 2. Commit the changes, this will create a pull request to the original repository. 
 
-## Optional Task: Local Deployment
-
-### Prerequisites
-- Docker - [https://www.docker.com](https://www.docker.com)
-
-1. Install Docker in your computer.
-2. Use the `jekyll/jekyll` Docker image to build and serve your website locally.
-3. Access your website at `http://localhost:4000` in your web browser.
-4. Customize your website and check the changes locally.
