@@ -28,10 +28,12 @@ Github pages hides the complexity of setting up a web server and allows you to h
 
 ## Task 2: Writing a Blog Entry
 
-1. Explore a cloud application in the field of biomedicine that you are interested in.
+1. Explore a cloud application in the field of biomedicine that you are interested in. Use google scholar, pubmed, or any other scientific database to find an interesting article.
 2. Write a blog entry on your personal website about the cloud application you explored. You can use the `/_posts/` directory to create a new blog entry. The file name should follow the format `YYYY-MM-DD-title.md`. Check the existing blog entries for examples.
 3. You can add a new blog entry by navigating to the `/_posts/` directory and clicking on the "Add file -> Create a new file" button.
 4. Commit the changes (use master branch).
+
+**Note**: Citations and references should be included in the blog entry for the article selected.
 
 ## Task 3: Sharing your personal website
 1. Edit the README.md file in your repository to include a link to your personal website.
