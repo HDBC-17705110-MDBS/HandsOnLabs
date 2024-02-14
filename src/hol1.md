@@ -36,6 +36,6 @@ Github pages hide the complexity of setting up a web server and allow you to hos
 **Note**: Citations and references should be included in the blog entry for the article selected.
 
 ## Task 3: Sharing your personal website
-1. Edit the README.md file in your repository to include a link to your personal website.
+1. Edit the [README.md](https://github.com/HDBC-17705110-MDBS/HandsOnLabs/blob/main/src/README.md) to include a link to your personal website.
 2. Commit the changes, creating a pull request to the original repository. 
 
