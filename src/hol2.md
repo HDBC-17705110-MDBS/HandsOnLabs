@@ -48,10 +48,23 @@ The figure provides a visual representation of the proposed hybrid infrastructur
 - Security Groups:
   - Name: HOL02-DMZ-SG
     - Description: Security group for DMZ
+    - Ports: 
+      - 22 (SSH)
+      - 443 (HTTPS)
+      - 943 (TCP)
+      - 945 (TCP)
+      - 1194 (UDP)
   - Name: HOL02-Production-SG
     - Description: Security group for Production
+    - Ports:
+      - 80 (HTTP) 
+      - 443 (HTTPS)
+      - 22 (SSH) - only from HOL02-DMZ-SG
   - Name: HOL02-Research-SG
     - Description: Security group for Research
+    - Ports:
+      - 22 (SSH) - only from HOL02-DMZ-SG
+      - 8888 (TCP) - only from HOL02-DMZ-SG
 
 - EC2 Instances:
   - Name: HOL02-VPN
@@ -114,7 +127,7 @@ sudo apt update && sudo apt install openvpn-as -y
 
 ### Installing the OpenVPN client
 
-- Follow the instructions in the `https://<elastic-ip>:943/admin` to install the OpenVPN client on your local machine and download the user-locked profile.
+- Follow the instructions in the `https://<elastic-ip>:943` to install the OpenVPN client on your local machine and download the user-locked profile.
 - There is no need to configure other users in the OpenVPN server.
 
 ### Confgiuring Nginx
