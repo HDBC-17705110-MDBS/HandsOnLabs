@@ -14,3 +14,4 @@ Use the following template to add your blog to the list:
 - [StudentName](https://studentname.github.io/)
 - [Linnaeus Bundalian](https://lbundalian.github.io/blog/)
 - [Samuel Leal](https://samuleal.github.io/)
+- [Sofia Cantalupo](https://sofiacantalupourv.github.io/)
