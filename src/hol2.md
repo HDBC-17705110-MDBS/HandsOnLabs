@@ -135,7 +135,15 @@ sudo apt update && sudo apt install openvpn-as -y
 - Use the following commands to install Nginx on the EC2 instance named **HOL02-VoilaServer**:
 
 ```bash
+# For Amazon Linux 2023
 sudo dnf install nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+```
+
+```bash
+# For Amazon Linux 2
+sudo amazon-linux-extras install nginx1 -y
 sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
