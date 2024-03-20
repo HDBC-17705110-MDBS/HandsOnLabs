@@ -205,8 +205,25 @@ Explore using cron jobs to synchronize EC2 instances with the S3 bucket.
 | Resolution Guidance                   |    5   | 
 | **Total**                             | **100**| 
 
+## Troubleshooting
+- **Accessing the Private Network**: Once the VPN Client is connected, use the private IP address of the EC2 instance to access the network, not the public IP. The VPN routes traffic to the subnets in the range of 10.0.1.X, 10.0.2.X, and 10.0.3.X. For example:
+
+```bash
+ssh -i yourkey ec2-user@10.0.2.X 
+ssh -i yourkey ec2-user@10.0.3.X
+```
+
+**Note**: When using a browser, access the Jupyter Notebook via the private IP address of the EC2 instance, like so: http://10.0.3.X:8888. Remember to include the port and remove the https:// if it is added automatically.
 
 
+- **Internet Connection Issues**: If your machine cannot connect to the internet to install packages, verify the following:
+  - The Internet Gateway (IGW) is attached to the Virtual Private Cloud (VPC).
+  - The **auto-assign public IP** option was enabled when launching the EC2 instance.
+  - The route table is correctly configured.
 
+- **Production and DMZ Subnets**: These should have a route to the IGW to be publicly available. One subnet is the entry point to our private zone, and the other is our public server. Both services require the usage of their elastic IP or the public IP.
 
+- **Using the VPN Client**: Ensure the configuration file you downloaded from the OpenVPN server is correctly set up and includes the elastic IP of the EC2 instance. If it contains the private IP, you will not be able to connect to the VPN.
+
+- **Choosing the Right AMI**: Be careful of the Amazon Machine Image (AMI) you are using. The commands to install Python, Nginx, and other software can vary between Amazon Linux 2 and Amazon Linux 2023. I recommend using Amazon Linux 2023. Note that python3 is already installed in Amazon Linux 2023, but in Amazon Linux 2, you need to install it (using the script).
 
