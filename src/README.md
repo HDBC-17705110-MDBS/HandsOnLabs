@@ -11,8 +11,8 @@ This repository contains **HOLs (Hands-On Labs)** for the course *High Performan
 - [HOL 02: Deploying a hybrid infrastructure for researchers in AWS](hol2.md)
 
 ## Student's blogs
-Use the following template to add your blog to the list:
-- [StudentName](https://studentname.github.io/)
+Add your name and website here!
+
 - [Linnaeus Bundalian](https://lbundalian.github.io/blog/)
 - [Samuel Leal](https://samuleal.github.io/)
 - [Sofia Cantalupo](https://sofiacantalupourv.github.io/)
