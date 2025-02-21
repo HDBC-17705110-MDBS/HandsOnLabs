@@ -17,3 +17,4 @@ Add your name and website here!
 - [Samuel Leal](https://samuleal.github.io/)
 - [Sofia Cantalupo](https://sofiacantalupourv.github.io/)
 - [Saioa Elizondo](https://sseliu.github.io/)
+- [Ignasi Prats](https://ignasi-pratsmendez.github.io)
