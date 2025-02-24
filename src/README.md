@@ -17,6 +17,7 @@ Add your name and website here!
 - [Samuel Leal](https://samuleal.github.io/)
 - [Sofia Cantalupo](https://sofiacantalupourv.github.io/)
 - [Saioa Elizondo](https://sseliu.github.io/)
+- [Juan Pedro Fernandez](https://juanpefo.github.io/jpfo.website-template/)
 - [Jaume Juan](https://jpjaume.github.io)
 - [Ignasi Prats](https://ignasi-pratsmendez.github.io)
 - [Alba Giró](https://albagiro.github.io/AlbaGiroo.github.io/)
