@@ -18,3 +18,5 @@ Add your name and website here!
 - [Sofia Cantalupo](https://sofiacantalupourv.github.io/)
 - [Saioa Elizondo](https://sseliu.github.io/)
 - [Ignasi Prats](https://ignasi-pratsmendez.github.io)
+- [Alba Giró](https://albagiro.github.io/AlbaGiroo.github.io/)
+- [Celia Rivilla](https://crivilla.github.io/)
