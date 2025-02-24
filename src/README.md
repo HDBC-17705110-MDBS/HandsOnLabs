@@ -23,3 +23,4 @@ Add your name and website here!
 - [Ignasi Prats](https://ignasi-pratsmendez.github.io)
 - [Alba Giró](https://albagiro.github.io/AlbaGiroo.github.io/)
 - [Celia Rivilla](https://crivilla.github.io/)
+- [Daniel Girbes](https://danigirbes.github.io/)
