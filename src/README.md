@@ -30,3 +30,4 @@ Add your name and website here!
 - [Zainab Al Yasiri](http://zainabalyasiri.github.io/)
 - [Ariadna Saez](https://ariadnasaez.github.io)
 - [Pol Monterde](https://pmonterde.github.io/)
+- [Julius Okanta](https://juliusokanta.github.io/)
