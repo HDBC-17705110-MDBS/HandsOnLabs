@@ -24,3 +24,5 @@ Add your name and website here!
 - [Alba Giró](https://albagiro.github.io/AlbaGiroo.github.io/)
 - [Celia Rivilla](https://crivilla.github.io/)
 - [Ariadna Saez](https://ariadnasaez.github.io)
+- [Pol Monterde](https://pmonterde.github.io/)
+
