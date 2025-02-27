@@ -31,5 +31,5 @@ Add your name and website here!
 - [Ariadna Saez](https://ariadnasaez.github.io)
 - [Pol Monterde](https://pmonterde.github.io/)
 - [Julius Okanta](https://juliusokanta.github.io/)
-- [Martin Kusasira Morgan ](https://martinmorgank.github.io/)
+- [Martin Kusasira Morgan ](https://martinmorgank.github.io/martinmorgank/)
 - [Clàudia Lozano](https://claudiaalozanoo.github.io/)
