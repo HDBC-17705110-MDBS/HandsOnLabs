@@ -1,4 +1,4 @@
-# HOL 02: Deploying a hybrid infrastructure for researchers in AWS
+# HOL 02 - Deploying a hybrid infrastructure for researchers in AWS
 
 ## Introduction
 

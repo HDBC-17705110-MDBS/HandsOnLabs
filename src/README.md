@@ -1,16 +1,23 @@
-# About this book
+# About this website
 
-This repository contains **HOLs (Hands-On Labs)** for the course *High Performance and Distributed Computing for Big Data* in the [Inter-university Master's Degree in Health Data Science](https://www.urv.cat/en/studies/master/courses/health-data-science/). The Hands on Labs are designed for Unit 3: Cloud Computing and Unit 4: Big Data.
+This website contains **HOLs (Hands-On Labs)** as well as **guides** for the course *High Performance and Distributed Computing for Big Data* in the [Inter-university Master's Degree in Health Data Science](https://www.urv.cat/en/studies/master/courses/health-data-science/). The Hands on Labs are designed for Unit 3: Cloud Computing and Unit 4: Big Data.
 
 ![Course logo](./figs/logo.png)
 
 ## Table of Contents
 
-- [HOL 1: Deploying your personal website](hol1.md)
-
-- [HOL 02: Deploying a hybrid infrastructure for researchers in AWS](hol2.md)
+- [Guide 1 - Setting up AWS for the first time](./guide1.md)
+- [Guide 2 - Setting up AWS for each subsequent session](./guide2.md)
+- [HOL 01 - Deploying your personal website](./hol1.md)
+- [HOL 02 - Deploying an hybrid infrastructure for researchers in AWS](./hol2.md)
+- [Quiz 1 - Cloud Computing (Fundamentals)](./quiz1.md)
 
 ## Student's blogs
+
+```admonish info
+Succesfully completeing [HOL 1](hol1.md) will result in you having your own personal website. Below is a list of students who have done so and also completed the [last task](hol1.html#task-4-sharing-your-personal-website) which makes them appear in the list below.
+```
+
 Add your name and website here!
 
 - [Linnaeus Bundalian](https://lbundalian.github.io/blog/)
