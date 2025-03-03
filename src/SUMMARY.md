@@ -4,6 +4,11 @@
 - [About](./README.md)
 - [Contribution](./CONTRIBUTING.md)
 
+# Sessions
+- [Session 1 & 2 - Introduction to Cloud Computing + Github Pages](./session1-2.md)
+- [Session 3 - Introduction to AWS + EC2](./session3.md)
+- [Session 4 - AWS S3](./session4.md)
+
 # Guides
 - [Guide 1 - Setting up AWS for the first time](./guide1.md)
 - [Guide 2 - Setting up AWS for each subsequent session](./guide2.md)
