@@ -4,13 +4,16 @@ Once you have followed the [first guide](./guide1.md) to set up your AWS account
 
 ## Table of contents
 
-- [Prerequisites](#prerequisites)
-- [Introduction](#introduction)
-- [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
-- [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
-- [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
-- [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
-- [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
+- [Guide 2 - Setting up AWS for each subsequent session](#guide-2---setting-up-aws-for-each-subsequent-session)
+  - [Table of contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Introduction](#introduction)
+  - [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
+  - [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
+  - [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
+  - [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
+  - [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
+  - [What's next?](#whats-next)
 
 ## Prerequisites
 
@@ -22,7 +25,7 @@ Once you have followed the [first guide](./guide1.md) to set up your AWS account
 
 Use this guide each time you want to work on your project and you need to start your AWS Learner Lab. If you successfully follow this guide you will end up with:
 
-- A terminal on your local machine connected to the EC2 instance
+- A remote terminal connected to the EC2 instance
 - An EC2 instance running with AWS credentials configured and updated
 - AWS credentials configured and updated on your local machine
 
@@ -171,14 +174,7 @@ aws: error: the following arguments are required: command
 
 This is the base command which by itself doesn't do anything. What we are going to do now is to configure the AWS CLI with our credentials so we can later run commands that can access other AWS resources like S3.
 
-To configure the AWS CLI, run the following command:
-
-```
-[ec2-user@ip-172-31-86-82 ~]$ aws configure
-AWS Access Key ID [None]:
-```
-
-You'll see we are being asked for the `AWS Access Key ID`. To get this key we have to go visit the AWS Academy website (not to be confused with the AWS Dashboard). Specifically we'll visit the page where we started the lab, in case you have closed it, below are the steps to get there:
+To configure the AWS CLI, we'll need to copy some access keys to a file on the EC2 machine. We'll see now what this means but let's first locate the access keys. We'll have to visit the AWS Academy website (not to be confused with the AWS Dashboard). Specifically we'll visit the page where we started the lab, in case you have closed it, below are the steps to get there:
 
 
 <p align="center">
@@ -193,15 +189,24 @@ We should now see the page where we launched the lab as shown below:
 
 ![AWS Dashboard](./figs/guide02/credentials0.png)
 
-Now click on `AWS Details` and then on `Show` to see the `Access Key ID` and the `Secret Access Key`.
+Now click on `AWS Details` and then on `Show`.
 
 ![AWS Dashboard](./figs/guide02/credentials1.png)
 
-Now some text will show up. Do you see it says we hve to write that text on a file called `credentials` inside the `.aws` folder? We're going to do just that. First step will be to make sure the `.aws` folder exists. Run the following command:
+Some text will show up. Do you see it says we have to write that text on a file called `credentials` inside the `.aws` folder? We're going to do just that. 
+
+<p align="center">
+    <img src="./figs/guide02/credentials-info.png">
+</p>
+
+![AWS Dashboard](./figs/guide02/credentials-info.png)
+
 
 ```admonish info
 This text will change each time a new lab session is started, that is why we'll have to update the contents of the `credentials` file each time we start a new lab session.
 ```
+
+First step will be to make sure the `.aws` folder exists. Run the following command:
 
 ```
 mkdir .aws
@@ -218,7 +223,7 @@ We are now getting into tricky terminal territory here. This is not something yo
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/AtlRPFuWgPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 
-The above command will open a text editor called `nano`. This means you are now editing the contents of the `credentials` file. I know this may be a bit confusing but try to imagin you are just editing a text file with Microsoft Word, the difference is we are going to do it only using the terminal, which means there isn't graphical user interface and we can only use our keyobard. You should see something like this:
+The above command will open a text editor called `nano`. This means you are now editing the contents of the `credentials` file. I know this may be a bit confusing but try to imagine you are just editing a text file with Microsoft Word, the difference is we are going to do it only using the terminal, which means there isn't a graphical user interface and we can only use our keyobard. You should see something like this:
 
 ![AWS Dashboard](./figs/guide02/nano-blank.png)
 
@@ -234,7 +239,7 @@ We are now going to select and copy the text from the AWS Academy website.
     <img src="./figs/guide02/credentials2.png", width="67%">
 </p>
 
-Next we'll go back to ther terminal where we are editing the `credentials` file and paste the text with `Ctrl + V` (try `Ctrl + Shift + V` if `Ctrl + V` doesn't work). The copied text is now where we want it and we can proceed so save the file and exit. To do so, press `Ctrl + X` is indicated in the cheatsheet at the bottom of nano.
+Next we'll go back to ther terminal where we are editing the `credentials` file and paste the text with `Ctrl + V` (try `Ctrl + Shift + V` if `Ctrl + V` doesn't work). The copied text is now where we want it and we can proceed so save the file and exit. To do so, press `Ctrl + X` as indicated in the cheatsheet at the bottom of nano.
 
 ![AWS Dashboard](./figs/guide02/nano-after-paste.png)
 
@@ -272,7 +277,9 @@ Perfect! We have now configured the AWS CLI on the remote machine and we are now
 
 ## Step 5: Configure AWS credentials on your local machine
 
-Start by opening a new terminal **on your machine, NOT on the remote one**. Let's now check if the AWS CLI is installed, run `aws --version` and you should see something like this:
+Let's now configure the AWS CLI on your local machine.
+
+Start by opening a new terminal **on your machine, NOT on the remote one**. To check if the AWS CLI is installed, run `aws --version` and you should see something like this:
 
 ```bash
 aws --version
@@ -281,7 +288,7 @@ aws-cli/2.24.15 Python/3.12.9 Windows/10 exe/AMD64
 
 If the command instead outputs an error that means we have to install the AWS CLI on our local machine. Follow the steps on the [AWS CLI installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to do so.
 
-Now we are going to configure the AWS CLI on your local machine. The steps are very similar as when we did it on our local machine, in fact if you are on MacOS you can just follow the exact same steps we did on the remote machine because you'll be able to use `nano` command. For Windows users, you can follow the steps below:
+Now we are going to configure the AWS CLI on your local machine. The steps are very similar as when we did it on the remote EC2 machine, in fact if you are on MacOS you can just follow the exact same steps of [Step 4](#step-4-configure-aws-credentials-on-the-ec2-machine) because you'll be able to use the `nano` command. For Windows users, you can follow the steps below:
 
 Make sure the `.aws` folder exists on your local machine by running `make .aws` command (remember if it throws an error there's nothing to worry about, it just means the folder already exists). Now we are going to create the `credentials` file inside the `.aws` folder. Run the following command:
 
@@ -294,11 +301,11 @@ This will open a text editor where you can write the credentials. You'll be aske
 ![AWS Dashboard](./figs/guide02/notepad1.png)
 
 ```admonish danger title="Important"
-Notice we are writing `credentials.` and not `credentials` (we are adding a dot at the end of the file name). This is because we want the file to be named just `credentials` and Windows would automatically add a `.txt` extension if we just write `credentials`. By adding a dot at the end of the file name we are telling Windows to not add any extension to the file name. Below is a screenshot of what would have happened if we just wrote `credentials`:
+Notice we are writing `credentials.` and not `credentials` (we are adding a dot at the end of the file name). This is because we want the file to be named just `credentials` and Windows would automatically add a `.txt` extension if we just wrote `credentials`. By adding a dot at the end of the file name we are telling Windows to not add any extension to the file name. Below is a screenshot of what would have happened if we just wrote `credentials`:
 
 ![AWS Dashboard](./figs/guide02/notepad-warning.png)
 
-We **do not want this**. We want the file to be named just `credentials`. That is why we write `credentials.` and not `credentials`.
+We **do not want this**. We want the file to be named just `credentials`. That is why we write `.aws/credentials.` and not `.aws/credentials` after the `notepad` command.
 ```
 
 Now we are going to select and copy the text from the AWS Academy website as we did before.
@@ -333,3 +340,11 @@ PS C:\Users\fnao> aws sts get-caller-identity
 
 PS C:\Users\fnao>
 ```
+
+Great! We can now run AWS CLI commands both on our local machine and on the remote EC2 machine.
+
+## What's next?
+
+You have now successfully started a new session of your AWS Academy Learner Lab. You have connected to your EC2 instance and configured (or updated if its not the first time) the AWS CLI on both the remote machine and your local machine. You are now ready to keep working on your projects. Remember this guide is intended to be followed each time one wants to start working on AWS and has to start the Learner Lab.
+
+All of this and more was covered during [Session 4](./session4.md), this guide is ment to help you out if you got stuck during class and to hopefully make it easier for you to get your AWS Lab set up and running.
