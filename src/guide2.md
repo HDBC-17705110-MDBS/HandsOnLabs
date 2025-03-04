@@ -2,6 +2,16 @@
 
 Once you have followed the [first guide](./guide1.md) to set up your AWS account, use this guide to set up your AWS environment for each session. That is for each time you want to work on your project and you start your AWS Learner Lab.
 
+## Table of contents
+
+- [Prerequisites](#prerequisites)
+- [Introduction](#introduction)
+- [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
+- [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
+- [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
+- [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
+- [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
+
 ## Prerequisites
 
 - AWS Academy account created
@@ -170,9 +180,14 @@ AWS Access Key ID [None]:
 
 You'll see we are being asked for the `AWS Access Key ID`. To get this key we have to go visit the AWS Academy website (not to be confused with the AWS Dashboard). Specifically we'll visit the page where we started the lab, in case you have closed it, below are the steps to get there:
 
-![AWS Dashboard](./figs/guide02/login2.png)
 
-![AWS Dashboard](./figs/guide02/login3.png)
+<p align="center">
+    <img src="./figs/guide02/login2.png">
+</p>
+
+<p align="center">
+    <img src="./figs/guide02/login3.png", width="67%">
+</p>
 
 We should now see the page where we launched the lab as shown below:
 
@@ -182,35 +197,64 @@ Now click on `AWS Details` and then on `Show` to see the `Access Key ID` and the
 
 ![AWS Dashboard](./figs/guide02/credentials1.png)
 
-Once the credentials are shown we'll first need to copy the value of `Access Key ID`, so in the example below we would copy `ASIA2CKYVHJAGNNECYQM`.
+Now some text will show up. Do you see it says we hve to write that text on a file called `credentials` inside the `.aws` folder? We're going to do just that. First step will be to make sure the `.aws` folder exists. Run the following command:
+
+```admonish info
+This text will change each time a new lab session is started, that is why we'll have to update the contents of the `credentials` file each time we start a new lab session.
+```
+
+```
+mkdir .aws
+```
+As when we where creating the `.ssh` folder when generating a key pair, the command may fail due to the folder already existing. If that's the case, don't worry about it. Now we are going to create the `credentials` file inside the `.aws` folder. Run the following command:
+
+```
+nano .aws/credentials
+```
+
+```admonish warning
+We are now getting into tricky terminal territory here. This is not something you need to fully understand, but I promise it will be helpful for you to know the basics and gain some experience with the terminal. Check out [the video](https://www.youtube.com/watch?v=AtlRPFuWgPs) below if you're courious about editing files from the terminal.
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/AtlRPFuWgPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+The above command will open a text editor called `nano`. This means you are now editing the contents of the `credentials` file. I know this may be a bit confusing but try to imagin you are just editing a text file with Microsoft Word, the difference is we are going to do it only using the terminal, which means there isn't graphical user interface and we can only use our keyobard. You should see something like this:
+
+![AWS Dashboard](./figs/guide02/nano-blank.png)
+
+```admonish danger title="Important"
+If it is not the first time you are editing this file, you will see some text already written as shown below. There are multiple ways to erase the contents of the file and write your new credentials, an easy one is to repeatedly press `Ctrl + K` until all the text is erased (each time you press it a line is deleted). Once the file is empty, you can start writing your new credentials.
+
+![AWS Dashboard](./figs/guide02/nano-already-written.png)
+
+```
+We are now going to select and copy the text from the AWS Academy website.
 
 <p align="center">
-    <img src="./figs/guide02/credentials2.png">
+    <img src="./figs/guide02/credentials2.png", width="67%">
 </p>
 
+Next we'll go back to ther terminal where we are editing the `credentials` file and paste the text with `Ctrl + V` (try `Ctrl + Shift + V` if `Ctrl + V` doesn't work). The copied text is now where we want it and we can proceed so save the file and exit. To do so, press `Ctrl + X` is indicated in the cheatsheet at the bottom of nano.
 
-Now go back to the terminal where we are configuring the AWS CLI and paste the `Access Key ID` and press `Enter`.
+![AWS Dashboard](./figs/guide02/nano-after-paste.png)
 
-```
-[ec2-user@ip-172-31-86-82 ~]$ aws configure
-AWS Access Key ID [None]: ASIA2CKYVHJAGNNECYQM
-AWS Secret Access Key [None]:
-```
+You will be asked if you want to save the changes. Press `Y` to save the changes.
 
-Now we are asked for the `AWS Secret Access Key`. Go back to the AWS Academy website and copy the value of `Secret Access Key`, now we could be copying the long text starting with `IQoJb3JpZ2luX2...`.
+![AWS Dashboard](./figs/guide02/nano-after-ctrl-x.png)
 
-<p align="center">
-    <img src="./figs/guide02/credentials3.png">
-</p>
+Finally we'll be asked for the file name to write the changes to. Just press `Enter` to confirm the file name since it is already correct.
 
-Paste the `Secret Access Key` in the terminal and press `Enter`. You will be asked for the `Default region name` and the `Default output format`. You can leave these empty by pressing `Enter` for both.
+![AWS Dashboard](./figs/guide02/nano-before-enter.png)
+
+Great! We've written a file just using the terminal. We can now check the contents of the file using `cat`:
 
 ```
-[ec2-user@ip-172-31-86-82 ~]$ aws configure
-AWS Access Key ID [None]: ASIA2CKYVHJAGNNECYQM
-AWS Secret Access Key [None]: IQoJb3JpZ2luX2...
-Default region name [None]:
-Default output format [None]:
+[ec2-user@ip-172-31-86-82 ~]$ cat .aws/credentials
+[default]
+asdfaaaws_access_key_id=ASIA2CKYVHJAOXR6P57M
+aws_secret_access_key=lu/KjIjBylX60GTfsqHvRyAqcqhsEVHsdzWDPlrT
+aws_session_token=IQoJb3JpZ2luX...
+[ec2-user@ip-172-31-86-82 ~]$
 ```
 To test if the configuration was successful, run `aws sts get-caller-identity` and you should see something like this:
 
@@ -224,29 +268,59 @@ To test if the configuration was successful, run `aws sts get-caller-identity` a
 [ec2-user@ip-172-31-86-82 ~]$
 ```
 
-Great! You have now configured the AWS CLI on the remote machine. You can now run commands to interact with AWS services.
+Perfect! We have now configured the AWS CLI on the remote machine and we are now able to run commands to interact with AWS services.
 
 ## Step 5: Configure AWS credentials on your local machine
 
-The first thing is to have the AWS CLI installed on your local machine. Follow the steps on the [AWS CLI installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to install the AWS CLI on your local machine.
-
-To check if the AWS CLI is installed, run `aws --version` and you should see something like this:
+Start by opening a new terminal **on your machine, NOT on the remote one**. Let's now check if the AWS CLI is installed, run `aws --version` and you should see something like this:
 
 ```bash
 aws --version
 aws-cli/2.24.15 Python/3.12.9 Windows/10 exe/AMD64
 ```
 
-Now we are going to configure the AWS CLI on your local machine. Run `aws configure` and you will be asked for the same information as on the remote machine. Follow the same steps as before to get the `Access Key ID` and the `Secret Access Key` and paste them when asked.
+If the command instead outputs an error that means we have to install the AWS CLI on our local machine. Follow the steps on the [AWS CLI installation guide](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) to do so.
 
-```bash
-aws configure
-AWS Access Key ID [None]: ASIA2CKYVHJAGNNECYQM
-AWS Secret Access Key [None]: IQoJb3JpZ2luX2...
-Default region name [None]:
-Default output format [None]:
+Now we are going to configure the AWS CLI on your local machine. The steps are very similar as when we did it on our local machine, in fact if you are on MacOS you can just follow the exact same steps we did on the remote machine because you'll be able to use `nano` command. For Windows users, you can follow the steps below:
+
+Make sure the `.aws` folder exists on your local machine by running `make .aws` command (remember if it throws an error there's nothing to worry about, it just means the folder already exists). Now we are going to create the `credentials` file inside the `.aws` folder. Run the following command:
+
+```
+notepad .aws/credentials.
 ```
 
+This will open a text editor where you can write the credentials. You'll be asked if you want to create a new file, if it is the first time you are configuring the AWS CLI on your local machine, press `Yes` as shown below. If it is not the first time you are configuring the AWS CLI on your local machine, you will see some text already written. Just erase it.
+
+![AWS Dashboard](./figs/guide02/notepad1.png)
+
+```admonish danger title="Important"
+Notice we are writing `credentials.` and not `credentials` (we are adding a dot at the end of the file name). This is because we want the file to be named just `credentials` and Windows would automatically add a `.txt` extension if we just write `credentials`. By adding a dot at the end of the file name we are telling Windows to not add any extension to the file name. Below is a screenshot of what would have happened if we just wrote `credentials`:
+
+![AWS Dashboard](./figs/guide02/notepad-warning.png)
+
+We **do not want this**. We want the file to be named just `credentials`. That is why we write `credentials.` and not `credentials`.
+```
+
+Now we are going to select and copy the text from the AWS Academy website as we did before.
+
+<p align="center">
+    <img src="./figs/guide02/credentials2.png", width="67%">
+</p>
+
+And we now paste it onto the text editor. Once that is done save the file by pressing `Ctrl + S` or by clicing on `File` and then `Save` as shown below:
+
+![AWS Dashboard](./figs/guide02/notepad2.png)
+
+You can now close the text editor and check the contents of the file using `cat`:
+
+```bash
+PS C:\Users\fnao> cat .aws\credentials
+[default]
+aws_access_key_id=ASIA2CKYVHJAOXR6P57M
+aws_secret_access_key=lu/KjIjBylX60GTfsqHvRyAqcqhsEVHsdzWDPlrT
+aws_session_token=IQoJb3JpZ2...
+PS C:\Users\fnao>
+```
 To test if the configuration was successful, run `aws sts get-caller-identity` and you should see something like this:
 
 ```bash
@@ -259,5 +333,3 @@ PS C:\Users\fnao> aws sts get-caller-identity
 
 PS C:\Users\fnao>
 ```
-
-# TODO: Change pasting the credentials to writing .aws/credentials instead

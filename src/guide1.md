@@ -2,6 +2,17 @@
 
 Use this guide to **set up AWS for the first time**. If you have already set up AWS and want to work on your project, follow [this guide](./guide2.md).
 
+## Table of contents
+
+- [Introduction](#introduction)
+- [Step 1: Creating an AWS Academy account](#step-1-creating-an-aws-academy-account)
+- [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
+- [Step 3: Creating an SSH key pair](#step-3-creating-an-ssh-key-pair)
+- [Step 3: Importing the public key to AWS](#step-3-importing-the-public-key-to-aws)
+- [Step 4: Creating an EC2 instance](#step-4-creating-an-ec2-instance)
+- [Step 5: Connecting to the EC2 instance](#step-5-connecting-to-the-ec2-instance)
+- [What's next?](#whats-next)
+
 ## Introduction
 
 This guide will help you set up your AWS Academy account so you can work on [Hands-On Lab 2](./hol2.md). If you successfully follow this guide you will end up with:
