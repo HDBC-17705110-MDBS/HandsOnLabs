@@ -4,16 +4,14 @@ Once you have followed the [first guide](./guide1.md) to set up your AWS account
 
 ## Table of contents
 
-- [Guide 2 - Setting up AWS for each subsequent session](#guide-2---setting-up-aws-for-each-subsequent-session)
-  - [Table of contents](#table-of-contents)
-  - [Prerequisites](#prerequisites)
-  - [Introduction](#introduction)
-  - [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
-  - [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
-  - [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
-  - [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
-  - [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
-  - [What's next?](#whats-next)
+- [Prerequisites](#prerequisites)
+- [Introduction](#introduction)
+- [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
+- [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
+- [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
+- [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
+- [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
+- [What's next?](#whats-next)
 
 ## Prerequisites
 
