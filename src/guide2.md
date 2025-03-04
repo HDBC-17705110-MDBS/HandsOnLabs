@@ -4,14 +4,16 @@ Once you have followed the [first guide](./guide1.md) to set up your AWS account
 
 ## Table of contents
 
-- [Prerequisites](#prerequisites)
-- [Introduction](#introduction)
-- [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
-- [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
-- [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
-- [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
-- [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
-- [What's next?](#whats-next)
+- [Guide 2 - Setting up AWS for each subsequent session](#guide-2---setting-up-aws-for-each-subsequent-session)
+  - [Table of contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Introduction](#introduction)
+  - [Step 1: Log in to your AWS account](#step-1-log-in-to-your-aws-account)
+  - [Step 2: Accessing the AWS Dashboard](#step-2-accessing-the-aws-dashboard)
+  - [Step 3: Connect to your EC2 instance](#step-3-connect-to-your-ec2-instance)
+  - [Step 4: Configure AWS credentials on the EC2 machine](#step-4-configure-aws-credentials-on-the-ec2-machine)
+  - [Step 5: Configure AWS credentials on your local machine](#step-5-configure-aws-credentials-on-your-local-machine)
+  - [What's next?](#whats-next)
 
 ## Prerequisites
 
@@ -288,7 +290,7 @@ If the command instead outputs an error that means we have to install the AWS CL
 
 Now we are going to configure the AWS CLI on your local machine. The steps are very similar as when we did it on the remote EC2 machine, in fact if you are on MacOS you can just follow the exact same steps of [Step 4](#step-4-configure-aws-credentials-on-the-ec2-machine) because you'll be able to use the `nano` command. For Windows users, you can follow the steps below:
 
-Make sure the `.aws` folder exists on your local machine by running `make .aws` command (remember if it throws an error there's nothing to worry about, it just means the folder already exists). Now we are going to create the `credentials` file inside the `.aws` folder. Run the following command:
+Make sure the `.aws` folder exists on your local machine by running `mkdir .aws` command (remember if it throws an error there's nothing to worry about, it just means the folder already exists). Now we are going to create the `credentials` file inside the `.aws` folder. Run the following command:
 
 ```
 notepad .aws/credentials.
