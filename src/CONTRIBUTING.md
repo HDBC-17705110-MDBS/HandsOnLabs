@@ -55,6 +55,8 @@ Once Rust is installed, you can install mdbook with the following command:
 
 ```bash
 cargo install mdbook --vers 0.4.34
+cargo install mdbook-admonish
+mdbook-admonish install
 ```
 
 ### Editing the files

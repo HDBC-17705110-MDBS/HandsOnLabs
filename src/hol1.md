@@ -1,4 +1,4 @@
-# HOL 01: Deploying your personal website
+# HOL 01 - Deploying your personal website
 
 ## Objectives
 
@@ -58,7 +58,7 @@ We are going to use a website template created by [Dean Attali](https://attalite
     <img src="./figs/hol01/description.jpeg" width="85%">
 </p>
 
-6. Test your website by visiting `https://username.github.io` in your web browser. You'll notice that the website is already populated with some example content.
+6. Test your website by visiting `https://username.github.io` in your web browser (replace `username` with your github username). You'll notice that the website is already populated with some example content.
 
 ## Task 2: Customizing your personal website
 
