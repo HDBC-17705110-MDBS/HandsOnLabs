@@ -52,3 +52,4 @@ Add your name and website here!
 - [Martin Kusasira Morgan ](https://martinmorgank.github.io/martinmorgank/)
 - [Clàudia Lozano](https://claudiaalozanoo.github.io/)
 - [Frances Scarlett Thomas](scarlett-st.github.io/)
+- [Marcelo Cunha](https://marcelokscunha.github.io/)
