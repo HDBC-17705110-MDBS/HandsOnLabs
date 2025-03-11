@@ -51,5 +51,5 @@ Add your name and website here!
 - [Julius Okanta](https://juliusokanta.github.io/)
 - [Martin Kusasira Morgan ](https://martinmorgank.github.io/martinmorgank/)
 - [Clàudia Lozano](https://claudiaalozanoo.github.io/)
-- [Frances Scarlett Thomas](scarlett-st.github.io/)
+- [Frances Scarlett Thomas](https://scarlett-st.github.io/)
 - [Marcelo Cunha](https://marcelokscunha.github.io/)
