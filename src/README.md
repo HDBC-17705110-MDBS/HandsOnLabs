@@ -53,4 +53,5 @@ Add your name and website here!
 - [Clàudia Lozano](https://claudiaalozanoo.github.io/)
 - [Frances Scarlett Thomas](https://scarlett-st.github.io/)
 - [Marcelo Cunha](https://marcelokscunha.github.io/)
+- [Clara Brunet](https://clarabrunet.github.io)
 - [Julen Rodriguez Eraso](https://juleneraso.github.io)
