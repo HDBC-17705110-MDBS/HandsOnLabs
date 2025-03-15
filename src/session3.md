@@ -17,6 +17,6 @@ The slides for the third session can be found [here](./slides/Session%203%20-%20
 
 ## Reording
 
-The recording the third session can be found on the subject's moodle with the following name:
+The recording of the third session can be found on the subject's moodle with the following name (or by clicking the link):
 
 - [Unit 3 - Cloud computing - Session 3 - AWS EC2](https://rovira.sharepoint.com/sites/A_2024-25_104260/_layouts/15/stream.aspx?id=%2Fsites%2FA%5F2024%2D25%5F104260%2FDocumentos%20compartidos%2FGeneral%2FRecordings%2FUnit%203%20%2D%20Cloud%20computing%20%2D%20Session%203%20%2D%20AWS%20EC2%2D20250226%5F140559%2DMeeting%20Recording%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E8fc94273%2D0347%2D47b1%2Da073%2Dfd2dcc696fc0)
