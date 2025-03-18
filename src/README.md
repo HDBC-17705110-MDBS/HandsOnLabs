@@ -56,3 +56,4 @@ Add your name and website here!
 - [Marcelo Cunha](https://marcelokscunha.github.io/)
 - [Clara Brunet](https://clarabrunet.github.io)
 - [Julen Rodriguez Eraso](https://juleneraso.github.io)
+- [Yael Eskenazi](https://yaeleskenazi.github.io/)
