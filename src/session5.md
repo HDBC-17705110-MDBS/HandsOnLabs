@@ -4,6 +4,10 @@ In this session we will introduce AWS Lambda, a serverless computing service pro
 
 We will also see how to package python dependencies as Lambda Layers and how to make them available to your Lambda function.
 
+## Resources
+
+The image dataset for cell counting can be downloaded by clicking [here](./slides/cell_images.zip).
+
 ## Slides
 
 The slides for the fifth session can be found [here](./slides/Session%205%20-%20AWS%20Lambda.pdf) and are also available below:
