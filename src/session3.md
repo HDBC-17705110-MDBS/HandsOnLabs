@@ -15,7 +15,7 @@ The slides for the third session can be found [here](./slides/Session%203%20-%20
 <iframe src="./slides/Session%203%20-%20Introduction%20to%20AWS%20+%20EC2%20(v2).pdf" width="100%" height="500px">
 </iframe>
 
-## Reording
+## Recording
 
 The recording of the third session can be found on the subject's moodle with the following name (or by clicking the link):
 

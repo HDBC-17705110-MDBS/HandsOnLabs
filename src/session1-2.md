@@ -11,7 +11,7 @@ The slides for the first two sessions can be found [here](./slides/Session%201%2
 <iframe src="./slides/Session%201%20and%202%20-%20Introduction%20to%20Cloud%20Computing%20+%20Github%20Pages.pdf" width="100%" height="500px">
 </iframe>
 
-## Reording
+## Recording
 
 Recordings for the first two sessions can be found on the subject's moodle with the following names (or by clicking the links):
 

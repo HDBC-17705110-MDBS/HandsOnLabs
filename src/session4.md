@@ -13,7 +13,7 @@ The slides for the fourth session can be found [here](./slides/Session%204%20-%2
 <iframe src="./slides/Session%204%20-%20AWS%20S3.pdf" width="100%" height="500px">
 </iframe>
 
-## Reording
+## Recording
 
 The recording of the fourth session can be found on the subject's moodle with the following name (or by clicking the link):
 
