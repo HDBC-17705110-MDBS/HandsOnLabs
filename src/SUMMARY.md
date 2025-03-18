@@ -8,6 +8,7 @@
 - [Session 1 & 2 - Introduction to Cloud Computing + Github Pages](./session1-2.md)
 - [Session 3 - Introduction to AWS + EC2](./session3.md)
 - [Session 4 - AWS S3](./session4.md)
+- [Session 5 - AWS Lambda](./session5.md)
 
 # Guides
 - [Guide 1 - Setting up AWS for the first time](./guide1.md)
