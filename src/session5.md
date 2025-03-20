@@ -19,4 +19,4 @@ The slides for the fifth session can be found [here](./slides/Session%205%20-%20
 
 The recording of the fifth session can be found on the subject's moodle with the following name (or by clicking the link):
 
-- [Unit 3 - Cloud computing - Session 5 - AWS Lambda]() (NOT AVAILABLE YET)
+- [Unit 3 - Cloud computing - Session 5 - AWS Lambda](https://rovira.sharepoint.com/:v:/s/A_2024-25_104260/EYdTtTHr3sdMm_NXx-Xzmh0BMQsFcWnZOiTdMK_WwklcjQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=dBfBXO)
