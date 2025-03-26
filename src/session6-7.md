@@ -12,7 +12,7 @@ The slides for the fifth session can be found [here](./slides/Session%206%20&%20
 
 ## Recording
 
-The recording of the sixth session can be found on the subject's moodle with the following name (or by clicking the link):
+The recording of the sixth and seventh session can be found on the subject's moodle with the following name (or by clicking the link):
 
 - [Unit 3 - Cloud computing - Session 6 - AWS Networking Part 1]() *NOT YET AVAILABLE*
 - [Unit 3 - Cloud computing - Session 7 - AWS Networking Part 2]() *NOT YET AVAILABLE*
