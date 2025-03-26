@@ -12,6 +12,7 @@ This website contains **HOLs (Hands-On Labs)** as well as **guides** for the cou
 - [Session 4 - AWS S3](./session4.md)
 - [Session 5 - AWS Lambda](./session5.md)
 - [Session 5 - AWS VPC](./session6.md)
+- [Session 6 & 7 - AWS Networking](./session6-7.md)
 
 ### Useful guides
 - [Guide 1 - Setting up AWS for the first time](./guide1.md)
