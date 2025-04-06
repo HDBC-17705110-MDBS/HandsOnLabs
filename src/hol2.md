@@ -1,41 +1,108 @@
 # HOL 02 - Deploying a hybrid infrastructure for researchers in AWS
 
+```
+from PIL import Image, ImageDraw, ImageFont
+
+# Create a blank image (RGB, 200x100 pixels, white background)
+image = Image.new('RGB', (200, 100), color='white')
+
+# Draw on the image
+draw = ImageDraw.Draw(image)
+draw.text((50, 40), "Hello!", fill='black')
+
+# Save the image
+image.save('test_image.png')
+
+# Show the image (optional, if running interactively)
+image.show()
+```
+
+```admonish info
+Your browser may have kept your session open. If you end up in the AWS Academy dashboard you are good to go and can skip to [Step 2](#step-2-accessing-the-aws-dashboard).
+```
+
+<p align="center">
+    <img src="./figs/guide02/login0.png">
+</p>
+
+<p align="center">
+    <img src="./figs/hol01/fork.jpeg" width="90%">
+</p>
+
+<!-- warning  i note tambe  -->
+
+```admonish danger title="Important"
+I have tested on Firefox and Google Chrome only. **Firefox fails to load the lab**. If your browser is failing to load the lab I suggest trying a different one.
+```
+
+```
+import boto3
+import json
+import os
+import urllib.parse
+
+s3 = boto3.client('s3')
+
+def lambda_handler(event, context):
+    # Extract bucket and image info from the S3 event
+    bucket = event['Records'][0]['s3']['bucket']['name']
+    key = urllib.parse.unquote_plus(event['Records'][0]['s3']['object']['key'])
+    original_name = os.path.splitext(os.path.basename(key))[0]
+    download_path = f'/tmp/{os.path.basename(key)}'
+    s3.download_file(bucket, key, download_path)
+
+    # Upload it to the "output" bucket with a different name
+    result_image_name = f"{original_name}-processed.png"
+    result_bucket = 'medical-images-processed-ferran-aran' # Replace with your bucket name
+    s3.upload_file(download_path, result_bucket, result_image_name)
+
+    return {
+        'statusCode': 200,
+        'body': json.dumps(f"Processed {key}")
+    }
+```
+
 ## Introduction
 
-Jupyter Notebooks have become an essential tool for analyzing data and disseminating findings in data science. This hands-on lab guides you through setting up a private Jupyter Notebook server on AWS for your research team. Furthermore, we will deploy a public Nginx web server using Voila to share your team's findings with the public.
+Jupyter Notebooks have become an essential tool for analyzing data and disseminating findings in data science. This hands-on lab guides you through setting up a Jupyter Notebook server on AWS for your research team which is going to save images to an S3 bucket monitored by a Lambda that processes them and saves the final result on another bucket. Furthermore, we will deploy a private FileGator file server using Docker to share sensitive data between your team.
 
 ## Objectives
 
-This hands-on lab aims to introduce you to the basics of cloud computing by deploying a hybrid infrastructure for researchers in AWS. The infrastructure will include a private Jupyter Notebook server accessible via VPN and a public Voila server accessible from the Internet.
+This hands-on lab aims to introduce you to the basics of cloud computing by deploying an infrastructure for researchers in AWS. It will include a public Jupyter Notebook server and a private FileGator server accessible from the VPN.
 
 ## Prerequisites
 
-- AWS Educate account.
-- Access to the AWS Management Console from vocareum.
-- Import your public key to AWS EC2 and name it **HOL02**.
+- AWS Academy account. (Check out [this guide](./guide1.md) for help).
+- Access to the AWS Management Console.
+- Knowing how to setup the AWS CLI Credentials. (Check out [this guide](./guide2.md) for help).
+- Basic knowledge of AWS services, including EC2, S3, Lambda, and VPC. (Check out the different sessions in the course for help, a summary of each session can be found on its page on this website, check [the index](./README.md) on the home page).
 
 ## Architecture Diagram
 
-The figure provides a visual representation of the proposed hybrid infrastructure. It depicts a Virtual Private Cloud (VPC) on AWS, segmented into three subnets: *Production, Research, and DMZ*. The Production Subnet hosts an EC2 instance named **HOL02-VoilaServer**, which is Internet-accessible. The Research Subnet accommodates an EC2 instance named **HOL02-Jupyter**,” accessible via VPN. The DMZ Subnet contains an EC2 instance named **HOL02-VPN**, which facilitates secure SSH connections from your team to the Research subnet.
+The figure below provides a visual representation of the proposed infrastructure. It depicts a Virtual Private Cloud (VPC) on AWS, segmented into two subnets: *Public and Private*. The Public Subnet hosts an EC2 instance named **lab-public-ec2**, which is Internet-accessible. The Private Subnet accommodates an EC2 instance named **lab-private-ec2**,” accessible via VPN. The VPC also contains a Client VPN endpoint, which allows secure access to the private subnet. 
+
+The public EC2 instance will be interacting with an S3 bucket using **boto3 library for python** which is going **to trigger a Lambda**. The private EC2 instance will just be serving the file server.
 
 ![Architecture Diagram](./figs/hol02/architecture.png)
 
 ### AWS 
 
 - VPC: 
-  - Name: HOL02-VPC
+  - Name: lab-vpc
   - CIDR: 10.0.0.0/16
     
 - Subnets: 
-  - Name: HOL02-DMZ
+  - Name: lab-public-subnet
     - CIDR: 10.0.1.0/24
-  - Name: HOL02-Production
+  - Name: lab-private-subnet
     - CIDR: 10.0.2.0/24
-  - Name: HOL02-Research
-    - CIDR: 10.0.3.0/24
 
 - Internet Gateway:
-  - Name: HOL02-IGW
+  - Name: lab-igw
+
+- Client VPN Endpoint:
+  - Name: lab-client-vpn-endpoint
+  - Client CIDR: 10.83.0.0/16
 
 - Route Tables:
   - Name: HOL02-DMZ-RT
@@ -67,20 +134,16 @@ The figure provides a visual representation of the proposed hybrid infrastructur
       - 8888 (TCP) - only from HOL02-DMZ-SG
 
 - EC2 Instances:
-  - Name: HOL02-VPN
-    - Subnet: HOL02-DMZ
-    - AMI: Ubuntu 22.04 LTS
-    - With elastic IP
-  - Name: HOL02-VoilaServer
-    - Subnet: HOL02-Production
-    - AMI: Amazon Linux 2
-  - Name: HOL02-Jupyter
-    - Subnet: HOL02-Research
+  - Name: lab-private-ec2
+    - Subnet: lab-private-subnet
+    - AMI: Ubuntu
+  - Name: lab-public-ec2
+    - Subnet: lab-public-subnet
     - AMI: Amazon Linux 2
 
 - S3 Buckets:
-  - Name: HOL02-Notebooks
-    - This bucket must include all the notebooks used by the research team.
+  - Name: lab-input-bucket-[YOUR-NAME]
+  - Name: lab-output-bucket-[YOUR-NAME]
 
 
 ## Task
