@@ -9,7 +9,7 @@
 - [Session 3 - Introduction to AWS + EC2](./session3.md)
 - [Session 4 - AWS S3](./session4.md)
 - [Session 5 - AWS Lambda](./session5.md)
-- [Session 6 & 7 - AWS Networking](./session6-7.md)
+- [Session 6, 7 & 8 - AWS Networking + 2nd Assignment](./session6-7-8.md)
 
 # Guides
 - [Guide 1 - Setting up AWS for the first time](./guide1.md)
