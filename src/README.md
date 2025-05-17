@@ -43,6 +43,7 @@ Add your name and website here!
 - [Jaume Juan](https://jpjaume.github.io)
 - [Ignasi Prats](https://ignasi-pratsmendez.github.io)
 - [Alba Giró](https://albagiro.github.io/AlbaGiroo.github.io/)
+- [Aicha Zribi](https://aichazribi.github.io/)
 - [Celia Rivilla](https://crivilla.github.io/)
 - [Laura Malaguilla](https://aterual.github.io/)
 - [Maria Fité](https://mfiteenr.github.io/)
