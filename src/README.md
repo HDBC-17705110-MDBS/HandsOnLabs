@@ -50,6 +50,7 @@ Add your name and website here!
 - [Laia Coronas Sala](https://laiacoronas.github.io/)
 - [Zainab Al Yasiri](http://zainabalyasiri.github.io/)
 - [Ariadna Saez](https://ariadnasaez.github.io)
+- [Olivia Burton](https://burtonolivia.github.io/)
 - [Pol Monterde](https://pmonterde.github.io/)
 - [Julius Okanta](https://juliusokanta.github.io/)
 - [Martin Kusasira Morgan ](https://martinmorgank.github.io/martinmorgank/)
