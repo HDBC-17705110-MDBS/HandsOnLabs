@@ -60,7 +60,6 @@ Add your name and website here!
 - [Julen Rodriguez Eraso](https://juleneraso.github.io)
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
+- [Olivia Burton](https://burtonolivia.github.io/)
 - [Maria Fernandez](https://mfb-urv.github.io)
-- [Eva Paraskevadaki] (https://evaparask.github.io/)
--
-
+- [Eva Paraskevadaki](https://evaparask.github.io/)
