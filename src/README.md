@@ -59,6 +59,7 @@ Add your name and website here!
 - [Clara Brunet](https://clarabrunet.github.io)
 - [Julen Rodriguez Eraso](https://juleneraso.github.io)
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
+- [Enric Canut](https://ecanutzimmer.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
 - [Marcell Winkler](https://bushika7.github.io/)
 - [Annabel Margalef](https://annabelmargalef.github.io/)
