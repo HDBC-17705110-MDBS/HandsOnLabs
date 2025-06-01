@@ -63,6 +63,7 @@ Add your name and website here!
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
 - [Enric Canut](https://ecanutzimmer.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
+- [Antonio García](https://antoniotygar.github.io/)
 - [Sofia Di Capua](https://sofiadicapua.github.io/)
 - [Raúl Verea](https://raulverea.github.io/)
 - [Irene Cuéllar](https://irenecuellar5.github.io/)
