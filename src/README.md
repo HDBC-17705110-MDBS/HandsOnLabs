@@ -61,3 +61,8 @@ Add your name and website here!
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
 - [Hassan berry](https://gwenfutapics.github.io)
+- [Onome Akpogheneta](https://oja25.github.io/)
+- [Judith Osuna](https://judith0suna.github.io/)
+- [Olivia Burton](https://burtonolivia.github.io/)
+- [Maria Fernandez](https://mfb-urv.github.io)
+- [Eva Paraskevadaki](https://evaparask.github.io/)
