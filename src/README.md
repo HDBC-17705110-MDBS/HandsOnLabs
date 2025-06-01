@@ -61,6 +61,7 @@ Add your name and website here!
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
 - [Enric Canut](https://ecanutzimmer.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
+- [Adrian Redondo Fernandez](https://adrianrefe4.github.io/)
 - [Pau Bordoy Vellibre](https://paubv.github.io/)
 - [Marc Albesa Vives](https://marcalvi.github.io/)
 - [Georgina Vogler](https://gevogler.github.io/)
