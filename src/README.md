@@ -61,6 +61,7 @@ Add your name and website here!
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
 - [Enric Canut](https://ecanutzimmer.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
+- [Georgina Vogler](https://gevogler.github.io/)
 - [Jordi Hernández Cano](https://jordihernandezcode.github.io/)
 - [Marcell Winkler](https://bushika7.github.io/)
 - [Annabel Margalef](https://annabelmargalef.github.io/)
