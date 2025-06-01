@@ -1,5 +1,9 @@
 # HOL 02 - Deploying a hybrid infrastructure for researchers in AWS
 
+```admonish info
+This activity was presented during Session 8, more information on the session can be found [here](./session6-7-8.md).
+```
+
 ## Introduction
 
 Jupyter Notebooks have become an essential tool for analyzing data and disseminating findings in data science. This hands-on lab guides you through setting up a public Jupyter Notebook server on AWS for your research team which is going to save images to an S3 bucket monitored by a Lambda that processes them and saves the final result on another bucket. Furthermore, we will deploy a private FileGator file server using Docker to share sensitive data between your team which will be accessible only through a VPN connection. 
@@ -47,7 +51,7 @@ Here are the services you will need to create in the AWS Management Console:
 ```admonish info
 The list below **does not** contain all the parameters you need to fill in, just the ones that could vary from what we saw in class. You'll need to find out the rest of the parameters by yourself (just look at the slides, everything is there 😉)
 
-For this task I would recommend to visit [Session 3](./session3.md) and [Session 4](./session4.md) of the course.
+For this task I would recommend to visit [Session 3](./session3.md), [Session 4](./session4.md) and [Session 5](./session5.md) of the course.
 ```
 
 - VPC: 
@@ -103,7 +107,7 @@ def lambda_handler(event, context):
 
     # Upload it to the "output" bucket with a different name
     result_image_name = f"{original_name}-processed.png"
-    result_bucket = 'medical-images-processed-[YOUR-NAME]' # Replace with your bucket name
+    result_bucket = 'lab-output-bucket-[YOUR-NAME]' # Replace with your bucket name
     s3.upload_file(download_path, result_bucket, result_image_name)
 
     return {
@@ -128,7 +132,7 @@ image.save(buffer, format='PNG')
 buffer.seek(0)
 
 # Upload to S3
-bucket_name = 'lab-output-bucket-[YOUR-NAME]'   # <-- Replace with your bucket name
+bucket_name = 'lab-input-bucket-[YOUR-NAME]'   # <-- Replace with your bucket name
 
 s3 = boto3.client('s3')
 object_key = 'lab-image.png'
@@ -175,7 +179,6 @@ For this task I would recommend to visit [Sessions 6, 7 and 8](./session6-7-8.md
     
 - NAT Gateway (*will have to be deleted once the EC2 instance is configured*):
   - Name: lab-nat-gateway
-  - Elastic IP: lab-nat-eip
 
 - Route Table (*will have to be deleted once the EC2 instance is configured*):
   - Name: (no name) it is the default route table of the VPC
