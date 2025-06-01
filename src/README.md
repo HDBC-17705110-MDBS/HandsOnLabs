@@ -60,6 +60,7 @@ Add your name and website here!
 - [Julen Rodriguez Eraso](https://juleneraso.github.io)
 - [Yael Eskenazi](https://yaeleskenazi.github.io/)
 - [Azucena Álvarez](https://azucenaal.github.io/)
+- [Marcell Winkler](https://bushika7.github.io/)
 - [Annabel Margalef](https://annabelmargalef.github.io/)
 - [Júlia Arbat](https://juliaarbat.github.io/)
 - [Marta Alberola Martin](https://martona83.github.io/)
